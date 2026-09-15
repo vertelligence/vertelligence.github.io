@@ -1,6 +1,264 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertelligence — Organize your ESG data once. Report everywhere.</title>
+  <meta name="description" content="Vertelligence unifies sustainability, compliance and operational data into one ESG framework you own. Setup, ingestion and long-term support by Omar Malik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <h1>Hello, Earth! This is the new page for Vertelligence LLC</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header: standard component from the style guide (§3) -->
+  <header class="vt-header">
+    <a class="vt-header__brand" href="#top" aria-label="Vertelligence home">
+      <!-- TODO: replace with local SVG export (assets/vertelligence-logo.svg) -->
+      <img src="assets/vert-lgo.svg" alt="" height="32" width="35">
+      <span class="vt-header__name">Vertelligence</span>
+    </a>
+
+    <button class="vt-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Menu</span>
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <nav id="site-nav" class="vt-header__links" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#library">Library</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/vertelligence" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/company/vertelligence" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="vt-btn vt-btn--primary vt-btn--sm" href="#contact">Work with me</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="eyebrow">vertbase · ESG data platform</p>
+          <h1>Organize your ESG data once.<br>Report everywhere.</h1>
+          <p class="hero__byline">Enabling responsible business through subject-matter expertise and data interoperability.</p>
+          <p class="hero__lede">Vertelligence unifies scattered sustainability, compliance and operational data into one framework you own, so you're ready for every report, audit and AI tool that comes next.</p>
+          <div class="hero__cta">
+            <a class="vt-btn vt-btn--dark" href="https://calendly.com/omar-vertelligence/30min" target="_blank" rel="noopener">Book a 30-min call</a>
+            <a class="vt-btn vt-btn--ghost" href="#how">See how it works</a>
+          </div>
+        </div>
+
+        <!-- Flow diagram: many sources → vertbase → many outputs -->
+        <div class="flow" aria-label="Diagram: data sources flow into vertbase, which feeds reports, tools and insights">
+          <ul class="flow__col">
+            <li>Utility &amp; energy data</li>
+            <li>Supplier records</li>
+            <li>Finance &amp; ERP</li>
+            <li>Policies &amp; legal</li>
+          </ul>
+          <div class="flow__hub">
+            <span class="flow__hub-name">vertbase</span>
+            <span class="flow__hub-sub">one unified ESG framework</span>
+          </div>
+          <ul class="flow__col">
+            <li>Regulatory reports</li>
+            <li>Third-party ESG software</li>
+            <li>Internal BI dashboards</li>
+            <li>AI &amp; analytics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2>One source of truth for responsible business.</h2>
+
+        <ol class="steps">
+          <li class="card">
+            <span class="step-num">01</span>
+            <h3>Connect</h3>
+            <p>Seamlessly weave together data from diverse datasets into one unified ESG framework.</p>
+          </li>
+          <li class="card">
+            <span class="step-num">02</span>
+            <h3>Own</h3>
+            <p>You control your data with a custom deployment of the application, on your terms.</p>
+          </li>
+          <li class="card">
+            <span class="step-num">03</span>
+            <h3>Report everywhere</h3>
+            <p>Organize once, then feed every framework, tool and stakeholder from the same data.</p>
+          </li>
+          <li class="card">
+            <span class="step-num">04</span>
+            <h3>Grow</h3>
+            <p>Let your knowledge compound over time instead of rebuilding it every reporting cycle.</p>
+          </li>
+        </ol>
+
+        <!-- Product glimpse: code viewing theme from the style guide (§5) -->
+        <div class="glimpse">
+          <div class="glimpse__text">
+            <h3>Structured, AI-ready data</h3>
+            <p>Every data point in vertbase keeps its source, its relation to your organization, and the frameworks you decide it supports. Its flexible structuredness is what makes reporting repeatable, audits traceable, and AI tools operationally useful.</p>
+          </div>
+          <figure class="glimpse__code">
+            <figcaption>Example record</figcaption>
+<pre class="vt-code"><code><span class="c">// one data point, many destinations</span>
+{
+  <span class="k">"metric"</span>: <span class="s">"scope_2_emissions"</span>,
+  <span class="k">"value"</span>: <span class="n">1284.6</span>,
+  <span class="k">"unit"</span>: <span class="s">"tCO2e"</span>,
+  <span class="k">"period"</span>: <span class="s">"FY2025"</span>,
+  <span class="k">"source"</span>: <span class="s">"utility_invoices"</span>,
+  <span class="k">"verified"</span>: <span class="n">true</span>,
+  <span class="k">"reports_to"</span>: [<span class="s">"annual_report"</span>, <span class="s">"esg_platform"</span>, <span class="s">"bi_dashboard"</span>]
+}</code></pre>
+          </figure>
+        </div>
+
+        <!-- Demo videos -->
+        <div class="demo" id="demo">
+          <p class="eyebrow">See it in action</p>
+          <h3 class="demo__title">Short demos of vertbase and the regulatory library.</h3>
+
+          <div class="demo__grid">
+            <figure class="demo__video">
+              <div class="demo__frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/KO4Q5pxWZkk"
+                  title="Vertelligence Regulatory Tracker demo"
+                  loading="lazy"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+              </div>
+              <figcaption>Regulatory Tracker (1 min) · <a href="https://youtu.be/KO4Q5pxWZkk" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+            </figure>
+
+            <!-- Placeholders: swap for iframes as new demos are released -->
+            <div class="demo__soon">
+              <div class="demo__soon-card">
+                <span class="demo__soon-tag">Coming soon</span>
+                <p>More demos are on the way, including data ingestion and report templates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Library: second product (law, policy & report templates) -->
+    <section class="section section--dark" id="library">
+      <div class="wrap library">
+        <div>
+          <p class="eyebrow">Regulatory library</p>
+          <h2>Law, policy and report templates across jurisdictions.</h2>
+          <p class="library__lede">Stop chasing regulatory updates. Get access to a curated, structured database of ESG law and policy, plus reporting templates that plug straight into your vertbase data.</p>
+          <ul class="library__points">
+            <li><strong>Across jurisdictions:</strong> see what applies where, side by side.</li>
+            <li><strong>Kept current:</strong> tracked as requirements evolve.</li>
+            <li><strong>Connected:</strong> templates map to the data points that fill them.</li>
+          </ul>
+        </div>
+        <div class="library__templates">
+          <p class="library__label">Report templates</p>
+          <ul class="chips">
+            <li><span class="chip__code">ESRS</span><span>European Sustainability Reporting Standards</span></li>
+            <li><span class="chip__code">GHGP</span><span>Greenhouse Gas Protocol</span></li>
+            <li><span class="chip__code">TCFD</span><span>Climate-related financial disclosures</span></li>
+          </ul>
+          <p class="library__note">More frameworks and jurisdictions are added over time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--mist" id="services">
+      <div class="wrap">
+        <p class="eyebrow">Services</p>
+        <h2>From first dataset to long-term insight.</h2>
+
+        <div class="services">
+          <article class="card">
+            <h3>Setup &amp; ingestion</h3>
+            <p>I deploy vertbase for your organization and bring your data sources in, mapped and ready to use.</p>
+          </article>
+          <article class="card">
+            <h3>Reporting readiness</h3>
+            <p>Get your data ready for the third-party software you love or your internal systems, whatever your reporting needs.</p>
+          </article>
+          <article class="card">
+            <h3>Long-term partnership</h3>
+            <p>Keep vertbase running for the long haul to track progress, stay ahead of regulatory change and uncover new insights.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Omar Malik</h2>
+          <p class="about__role">Founder, Vertelligence</p>
+        </div>
+        <div class="about__body">
+          <p class="about__lead">A strategic partner in responsible business transformation.</p>
+          <p>Domain expert in ESG data, regulatory developments, and software-enabled workflows. Works across legal, financial, and business intelligence functions to translate complex requirements into practical technology solutions that integrate sustainable business practices.</p>
+          <ul class="creds">
+            <li>Degree in Environmental Management</li>
+            <li>Certified in Web App Development</li>
+            <li>Certified in Sustainable Investing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / ways to work together -->
+    <section class="section section--green" id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Work with me</p>
+        <h2>Three ways to work together.</h2>
+
+        <div class="engage">
+          <article class="engage__item">
+            <h3>vertbase &amp; library</h3>
+            <p>A custom deployment with setup, ingestion and support, plus access to the regulatory library.</p>
+          </article>
+          <article class="engage__item">
+            <h3>Contract</h3>
+            <p>Project-based work on ESG data, reporting workflows or compliance tooling.</p>
+          </article>
+          <article class="engage__item">
+            <h3>Full-time</h3>
+            <p>Bring ESG data and product expertise in-house on your team.</p>
+          </article>
+        </div>
+
+        <div class="contact__cta">
+          <a class="vt-btn vt-btn--dark" href="https://calendly.com/omar-vertelligence/30min" target="_blank" rel="noopener">Book a 30-min call</a>
+          <a class="vt-btn vt-btn--outline-dark" href="https://linkedin.com/in/omar-malik-pro" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> Vertelligence LLC</p>
+      <p class="footer__byline">Enabling responsible business through subject-matter expertise and data interoperability.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
